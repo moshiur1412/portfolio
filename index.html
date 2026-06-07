@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD. Moshiur Rahman | Senior Laravel Developer</title>
+  <meta name="description" content="Senior Laravel Developer & Technical Lead with 9+ years of experience building scalable SaaS, ERP, FinTech, and enterprise systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #06b6d4;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --text: #0f172a;
+      --text-light: #475569;
+      --text-muted: #94a3b8;
+      --border: #e2e8f0;
+      --shadow: 0 4px 24px rgba(0,0,0,.06);
+      --radius: 16px;
+      --max-w: 1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: var(--shadow); }
+    nav .inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 64px;
+    }
+    nav .logo {
+      font-weight: 800; font-size: 1.1rem; color: var(--primary);
+      text-decoration: none; letter-spacing: -.5px;
+    }
+    nav .logo span { color: var(--text); }
+    nav ul { display: flex; gap: 8px; list-style: none; align-items: center; }
+    nav ul li a {
+      text-decoration: none; font-size: .875rem; font-weight: 500;
+      color: var(--text-light); padding: 8px 14px; border-radius: 8px;
+      transition: background .2s, color .2s;
+    }
+    nav ul li a:hover { background: var(--bg-alt); color: var(--primary); }
+    nav ul li a.dl-btn {
+      background: var(--primary); color: #fff; padding: 8px 18px;
+      border-radius: 8px; font-weight: 600;
+    }
+    nav ul li a.dl-btn:hover { background: var(--primary-dark); }
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text); }
+
+    /* HERO */
+    .hero {
+      padding: 140px 24px 80px; max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 48px;
+    }
+    .hero-content { flex: 1; }
+    .hero-badge {
+      display: inline-block; background: #eff6ff; color: var(--primary);
+      font-size: .8rem; font-weight: 600; padding: 4px 14px;
+      border-radius: 20px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 3rem; font-weight: 800; line-height: 1.15; letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero .title-line {
+      font-size: 1.2rem; color: var(--text-light); font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .hero .contact-row {
+      display: flex; flex-wrap: wrap; gap: 16px 24px; margin-top: 20px;
+      font-size: .9rem; color: var(--text-light);
+    }
+    .hero .contact-row a {
+      color: var(--text-light); text-decoration: none; display: inline-flex;
+      align-items: center; gap: 6px; transition: color .2s;
+    }
+    .hero .contact-row a:hover { color: var(--primary); }
+    .hero-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px; border-radius: 10px; font-weight: 600;
+      font-size: .9rem; text-decoration: none; transition: all .2s;
+      border: none; cursor: pointer;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,.3); }
+    .btn-outline { border: 2px solid var(--border); color: var(--text); background: transparent; }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); background: #f8fafc; }
+    .hero-visual { flex-shrink: 0; }
+    .hero-visual .avatar-placeholder {
+      width: 220px; height: 220px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 4rem; font-weight: 700; box-shadow: 0 20px 60px rgba(37,99,235,.25);
+    }
+
+    /* SECTION */
+    section { padding: 72px 24px; }
+    section .inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label {
+      display: inline-block; font-size: .75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--primary); margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 2rem; font-weight: 700; margin-bottom: 40px; letter-spacing: -.5px;
+    }
+    .section-alt { background: var(--bg-alt); }
+
+    /* SUMMARY */
+    .summary-text { font-size: 1.1rem; color: var(--text-light); max-width: 900px; line-height: 1.8; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
+    }
+    .skill-group {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; transition: transform .2s, box-shadow .2s;
+    }
+    .skill-group:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .skill-group h3 {
+      font-size: .9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+    }
+    .skill-group p { font-size: .9rem; color: var(--text-light); line-height: 1.8; }
+
+    /* EXPERIENCE */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
+      width: 2px; background: var(--border);
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 40px; padding-left: 24px;
+    }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -29px; top: 8px;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--primary); border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+    .timeline-item .period {
+      font-size: .8rem; font-weight: 600; color: var(--primary); margin-bottom: 2px;
+    }
+    .timeline-item h3 { font-size: 1.15rem; font-weight: 700; }
+    .timeline-item .sub { font-weight: 500; color: var(--text-light); font-size: .95rem; margin-bottom: 8px; }
+    .timeline-item ul { list-style: none; padding: 0; }
+    .timeline-item ul li {
+      font-size: .9rem; color: var(--text-light); padding: 3px 0;
+      position: relative; padding-left: 18px;
+    }
+    .timeline-item ul li::before {
+      content: '▹'; position: absolute; left: 0; color: var(--primary);
+    }
+    .nested-item {
+      margin-top: 8px; padding: 12px 16px; background: var(--bg-alt);
+      border-radius: 10px; border-left: 3px solid var(--accent);
+    }
+    .nested-item .nested-title { font-weight: 600; font-size: .85rem; color: var(--text); }
+
+    /* PROJECTS */
+    .project-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .project-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 28px; transition: transform .2s, box-shadow .2s;
+    }
+    .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .project-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .project-card .tag {
+      display: inline-block; font-size: .7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--accent); margin-bottom: 10px;
+    }
+    .project-card ul { list-style: none; padding: 0; }
+    .project-card ul li {
+      font-size: .875rem; color: var(--text-light); padding: 4px 0;
+      position: relative; padding-left: 18px;
+    }
+    .project-card ul li::before { content: '▹'; position: absolute; left: 0; color: var(--primary); }
+
+    /* EDUCATION / CERT / LANG */
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .info-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px;
+    }
+    .info-card h3 { font-size: .9rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .info-card .item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .info-card .item:last-child { border: 0; margin: 0; padding: 0; }
+    .info-card .item strong { display: block; font-size: .95rem; }
+    .info-card .item span { font-size: .85rem; color: var(--text-light); }
+    .lang-item { display: flex; justify-content: space-between; padding: 6px 0; }
+    .lang-item .name { font-weight: 500; }
+    .lang-item .level { color: var(--text-light); font-size: .875rem; }
+
+    /* DOWNLOAD */
+    .dl-section { text-align: center; }
+    .dl-section p { color: var(--text-light); max-width: 520px; margin: 0 auto 24px; }
+
+    /* FOOTER */
+    footer {
+      text-align: center; padding: 32px 24px; font-size: .85rem;
+      color: var(--text-muted); border-top: 1px solid var(--border);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 820px) {
+      .hero { flex-direction: column-reverse; text-align: center; padding-top: 120px; }
+      .hero .contact-row { justify-content: center; }
+      .hero-actions { justify-content: center; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-visual .avatar-placeholder { width: 160px; height: 160px; font-size: 3rem; }
+      nav ul { display: none; }
+      nav ul.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 24px; gap: 4px; }
+      .menu-toggle { display: block; }
+    }
+
+    /* PRINT */
+    @media print {
+      nav, .menu-toggle, .hero-actions, .dl-section, footer { display: none !important; }
+      .hero { padding-top: 40px; padding-bottom: 24px; }
+      section { padding: 24px; }
+      .section-title { margin-bottom: 16px; }
+      .timeline-item { margin-bottom: 16px; }
+      .skill-group:hover, .project-card:hover { transform: none; box-shadow: none; }
+      body { font-size: 11px; }
+      .hero h1 { font-size: 24px; }
+      .hero .title-line { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="inner">
+    <a href="#" class="logo">Moshiur<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+    <ul id="navMenu">
+      <li><a href="#summary">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#download" class="dl-btn"><i class="fas fa-download"></i> Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Open to opportunities</div>
+    <h1>MD. Moshiur<br/><span>Rahman</span></h1>
+    <div class="title-line">Senior Laravel Developer &amp; Technical Lead</div>
+    <div class="title-line" style="font-size:.95rem;color:var(--text-muted);margin-top:-4px;">ERP &amp; FinTech Platforms</div>
+    <div class="contact-row">
+      <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+      <a href="tel:+8801722652770"><i class="fas fa-phone"></i> +8801722 65 27 70</a>
+      <a href="mailto:moshiur1412@gmail.com"><i class="fas fa-envelope"></i> moshiur1412@gmail.com</a>
+      <a href="https://linkedin.com/in/moshiur1412" target="_blank"><i class="fab fa-linkedin"></i> moshiur1412</a>
+      <a href="https://github.com/moshiur1412" target="_blank"><i class="fab fa-github"></i> moshiur1412</a>
+    </div>
+    <div class="hero-actions">
+      <a href="#download" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Download Resume</a>
+      <a href="mailto:moshiur1412@gmail.com" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contact Me</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="avatar-placeholder">MR</div>
+  </div>
+</header>
+
+<!-- SUMMARY -->
+<section id="summary">
+  <div class="inner">
+    <span class="section-label">About</span>
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="summary-text">
+      Senior Backend Engineer and Technical Lead with 9+ years of professional experience building scalable SaaS, ERP, FinTech, and enterprise workflow systems using Laravel and modern backend technologies. Specialized in high-performance API architecture, database optimization, queue-based processing, Redis caching, and scalable cloud deployments. Proven track record of reducing API latency by over 90%, designing enterprise-grade multi-tenant systems, and leading cross-functional engineering teams to deliver reliable production solutions at scale.
+    </p>
+    <p class="summary-text" style="margin-top:16px;">
+      Strong expertise in Laravel, MySQL optimization, Redis caching, and cloud-based deployments, with hands-on experience collaborating across teams to deliver reliable, production-grade solutions.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-alt">
+  <div class="inner">
+    <span class="section-label">Competencies</span>
+    <h2 class="section-title">Technical Core Competencies</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3><i class="fas fa-server"></i> Backend</h3>
+        <p>PHP (Laravel 11+), CodeIgniter (familiar), REST APIs, Microservices Architecture</p>
+      </div>
+      <div class="skill-group">
+        <h3><i class="fas fa-code"></i> Frontend</h3>
+        <p>React.js, JavaScript (ES6+), jQuery, Ajax, HTML5, CSS3, Bootstrap, Tailwind CSS</p>
+      </div>
+      <div class="skill-group">
+        <h3><i class="fas fa-database"></i> Databases &amp; Performance</h3>
+        <p>MySQL, PostgreSQL, Query Optimization, Indexing, Redis</p>
+      </div>
+      <div class="skill-group">
+        <h3><i class="fas fa-cloud"></i> DevOps &amp; Cloud</h3>
+        <p>Docker, AWS (EC2, S3), CI/CD, Linux (Ubuntu/Kali)</p>
+      </div>
+      <div class="skill-group">
+        <h3><i class="fas fa-tools"></i> Development Tools</h3>
+        <p>ChatGPT, GitHub Copilot, Ollama, Cursor, Antigravity and Open Code</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="inner">
+    <span class="section-label">Career</span>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="period">Oct 2023 — Present</div>
+        <h3>Software Specialist</h3>
+        <div class="sub">SSL Wireless — Dhaka, Bangladesh</div>
+        <ul>
+          <li>Reduced API response time from 12s to &lt;1s (90%+ improvement) using indexing and Redis caching</li>
+          <li>Designed scalable backend systems handling large datasets</li>
+          <li>Processed 40k+ records using queue-based architecture</li>
+          <li>Introduced Docker for consistent deployment environments</li>
+          <li>Collaborated with cross-functional teams for production delivery</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="period">Aug 2016 — Sep 2023</div>
+        <h3>Software Engineer → Technical Lead</h3>
+        <div class="sub">Japan MDB Co. Ltd. — Dhaka, Bangladesh</div>
+
+        <div class="nested-item">
+          <div class="nested-title">Technical Lead (Jan 2020 – Sep 2023)</div>
+          <ul>
+            <li>Led a cross-functional team (Engineering, Design, Product) to deliver scalable SaaS platforms</li>
+            <li>Mentored developers and enforced coding standards, improving overall code quality</li>
+          </ul>
+        </div>
+
+        <div class="nested-item" style="margin-top:8px;">
+          <div class="nested-title">Senior Software Engineer (Jan 2018 – Dec 2019)</div>
+          <ul>
+            <li>Developed and optimized backend systems and APIs for enterprise applications</li>
+            <li>Improved performance through efficient database design and query optimization</li>
+          </ul>
+        </div>
+
+        <div class="nested-item" style="margin-top:8px;">
+          <div class="nested-title">Software Engineer (Aug 2016 – Dec 2017)</div>
+          <ul>
+            <li>Built backend services integrated with web and mobile applications</li>
+            <li>Worked on real-time integrations and explored computer vision use cases (OpenCV)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="period">Apr 2016 – Jul 2016</div>
+        <h3>Junior Software Engineer</h3>
+        <div class="sub">Daffodil Japan IT Ltd. — Dhaka, Bangladesh</div>
+        <ul>
+          <li>Developed and customized eCommerce solutions using PrestaShop</li>
+          <li>Built and modified WordPress themes, including news portal-style websites</li>
+          <li>Translated PSD designs into fully functional, cross-browser compatible web pages</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="period">Jan 2015 – Jul 2016</div>
+        <h3>Provisional IT Officer (Part-Time)</h3>
+        <div class="sub">Daffodil Institute of IT — Dhaka, Bangladesh</div>
+        <ul>
+          <li>Completed various projects including global recruitments and institute-required systems</li>
+          <li>Made significant contributions through websites based on specific requirements</li>
+          <li>Implemented responsive UI using HTML5, CSS3, and JavaScript</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-alt">
+  <div class="inner">
+    <span class="section-label">Portfolio</span>
+    <h2 class="section-title">Key Contributions</h2>
+    <div class="project-cards">
+
+      <div class="project-card">
+        <div class="tag">ERP</div>
+        <h3><i class="fas fa-building"></i> Enterprise ERP &amp; Workflow Management</h3>
+        <ul>
+          <li>Architected scalable multi-tenant ERP solution covering marketing, inventory, warehouse, workflow automation, LC management, booking, PI processing, and advanced reporting</li>
+          <li>Implemented secure RBAC and tenant-level data isolation</li>
+          <li>Optimized complex queries, caching strategies, and API performance for high-speed dashboards</li>
+          <li>Designed RESTful APIs, reusable service layers, and modular backend following clean code principles</li>
+          <li>Built custom ERP features for international trading: LC, booking, import/export workflows</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="tag">FinTech</div>
+        <h3><i class="fas fa-exchange-alt"></i> Virtual Recharge System</h3>
+        <ul>
+          <li>Developed high-volume FinTech transaction system with secure recharge workflows and trigger validation</li>
+          <li>Implemented async CSV import/export using Laravel Queues &amp; Jobs</li>
+          <li>Built real-time operational dashboards with optimized API responses and caching</li>
+          <li>Enhanced reliability through queue management, DB optimization, and error-handling</li>
+          <li>Built service-based recharge platform integrating banking and online payment services</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="tag">Dashboard</div>
+        <h3><i class="fas fa-chart-line"></i> Spectrum Pro – Business &amp; Jira Dashboard</h3>
+        <ul>
+          <li>Developed enterprise-grade SDLC tracking platform bridging business and engineering teams</li>
+          <li>Engineered real-time workflow management with automated stage transitions</li>
+          <li>Integrated Jira APIs for real-time sync of tasks, sprint updates, and workflows</li>
+          <li>Built scalable backend services, reporting modules, and dashboard analytics</li>
+          <li>Developed project/resource management for tracking workload distribution and costs</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION / CERT / LANGUAGES -->
+<section id="education">
+  <div class="inner">
+    <span class="section-label">Background</span>
+    <h2 class="section-title">Education &amp; More</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="item">
+          <strong>B.Sc. in Business Information Technology</strong>
+          <span>University of Greenwich, UK — 1st Class (2017)</span>
+        </div>
+        <div class="item">
+          <strong>Higher Secondary Certificate (HSC)</strong>
+          <span>GPA: 4.50/5.00 — MAD, Dhaka Board (2009)</span>
+        </div>
+        <div class="item">
+          <strong>Secondary School Certificate (SSC)</strong>
+          <span>GPA: 4.83/5.00 — KDM, Jessore Board (2007)</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fas fa-certificate"></i> Certifications &amp; Training</h3>
+        <div class="item"><strong>Cyber Hygiene Training</strong><span>The Asia Foundation (2026)</span></div>
+        <div class="item"><strong>Agile Bangladesh Conference</strong><span>DIIT (2015)</span></div>
+        <div class="item"><strong>Leadership &amp; ICT Workshop</strong><span>Seminar &amp; workshop organization</span></div>
+        <div class="item"><strong>Active Problem Solving</strong><span>HackerRank: 150+ problems solved</span></div>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <div class="lang-item"><span class="name">English</span><span class="level">Advanced</span></div>
+        <div class="lang-item"><span class="name">Arabic</span><span class="level">Read &amp; Write</span></div>
+        <div class="lang-item"><span class="name">Bangla</span><span class="level">Native</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="section-alt dl-section">
+  <div class="inner">
+    <span class="section-label">Get a Copy</span>
+    <h2 class="section-title">Download Resume</h2>
+    <p>Download a PDF version of my resume or print directly from your browser. The print layout is optimized for a clean, professional look.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF (Print)</button>
+      <a href="mailto:moshiur1412@gmail.com?subject=Resume%20Request" class="btn btn-outline"><i class="fas fa-envelope"></i> Request via Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 MD. Moshiur Rahman. Built with <i class="fas fa-heart" style="color:var(--primary);"></i> for the web.
+</footer>
+
+<script>
+  // Navbar shadow on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  // Close menu on link click
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => menu.classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
