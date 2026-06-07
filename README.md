@@ -12,6 +12,10 @@ Modern static portfolio website built with HTML, CSS &amp; JavaScript. Ready to 
 
 Your site will be live at `https://moshiur1412.github.io/portfolio`
 
-## PDF Download
+## Features
 
-Open the site in your browser and click **Download PDF (Print)** — the print stylesheet will render a clean resume-ready layout. Save as PDF from the browser print dialog.
+- **Loading screen** — animated spinner on page load for a polished first impression
+- **Scroll reveal** — sections fade up as you scroll
+- **PDF download** — click **Download PDF** to generate a professional A4 PDF (`MD_Moshiur_Rahman_Resume.pdf`) via html2pdf.js with a live progress indicator
+- **Print fallback** — click **Print Version** for the browser's native print dialog (print stylesheet included)
+- **Responsive** — works on mobile, tablet, and desktop
