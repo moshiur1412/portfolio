@@ -239,6 +239,8 @@
     .hero-visual .tech-badge:nth-child(5){bottom:20px;right:-36px;color:var(--accent2);animation-delay:1.2s}
     .hero-visual .tech-badge:nth-child(6){bottom:60px;left:-36px;color:#8b5cf6;animation-delay:1.8s}
     .hero-visual .tech-badge:nth-child(7){top:30px;left:-32px;color:#0891b2;animation-delay:2.4s}
+    .hero-visual .tech-badge:nth-child(8){top:-10px;left:20px;color:#ff9900;animation-delay:3s}
+    .hero-visual .tech-badge:nth-child(9){bottom:-5px;left:50%;color:#f05032;animation-delay:3.6s}
     .hero-visual .tech-badge i{margin-right:4px;font-size:.65rem}
     @keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
@@ -573,6 +575,182 @@
     @keyframes dlSpin{to{transform:rotate(360deg)}}
     .dl-loader p{margin-top:16px;font-weight:500;font-size:.9rem;color:rgba(255,255,255,.7)}
 
+    /* STATS */
+    .stats-grid{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+      margin-bottom:0
+    }
+    .stat-card{
+      text-align:center;padding:32px 20px;
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:var(--radius);position:relative;overflow:hidden;
+      transition:all .35s ease
+    }
+    .stat-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;
+      height:3px;background:var(--grad-1);opacity:0;transition:opacity .35s
+    }
+    .stat-card:hover{
+      transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--primary-light)
+    }
+    .stat-card:hover::before{opacity:1}
+    .stat-card .stat-icon{
+      width:56px;height:56px;border-radius:14px;
+      background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(139,92,246,.1));
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto 16px;font-size:1.4rem;color:var(--primary)
+    }
+    .stat-card .stat-number{
+      font-size:2.8rem;font-weight:800;letter-spacing:-2px;
+      background:var(--grad-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;line-height:1.1
+    }
+    .stat-card .stat-label{
+      font-size:.85rem;font-weight:600;color:var(--text-light);
+      margin-top:6px;text-transform:uppercase;letter-spacing:1px
+    }
+
+    /* SERVICES */
+    .services-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:24px
+    }
+    .service-card{
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:32px;
+      transition:all .35s ease;position:relative;overflow:hidden
+    }
+    .service-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;
+      height:3px;background:var(--grad-2);opacity:0;transition:opacity .35s
+    }
+    .service-card:hover{
+      transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--primary-light)
+    }
+    .service-card:hover::before{opacity:1}
+    .service-card .service-icon{
+      width:56px;height:56px;border-radius:14px;
+      background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(139,92,246,.1));
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:18px;font-size:1.3rem;color:var(--primary)
+    }
+    .service-card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px}
+    .service-card p{font-size:.9rem;color:var(--text-light);line-height:1.7}
+
+    /* TECH STACK */
+    .tech-scroll-wrapper{
+      overflow:hidden;position:relative;padding:20px 0
+    }
+    .tech-scroll-wrapper::before,.tech-scroll-wrapper::after{
+      content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;
+      pointer-events:none
+    }
+    .tech-scroll-wrapper::before{left:0;background:linear-gradient(90deg,var(--bg-alt),transparent)}
+    .tech-scroll-wrapper::after{right:0;background:linear-gradient(-90deg,var(--bg-alt),transparent)}
+    [data-theme=dark] .tech-scroll-wrapper::before{background:linear-gradient(90deg,var(--bg-alt),transparent)}
+    [data-theme=dark] .tech-scroll-wrapper::after{background:linear-gradient(-90deg,var(--bg-alt),transparent)}
+    .tech-track{
+      display:flex;gap:40px;animation:scrollTech 30s linear infinite;
+      width:max-content
+    }
+    .tech-track:hover{animation-play-state:paused}
+    @keyframes scrollTech{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .tech-item{
+      display:flex;align-items:center;gap:10px;
+      padding:12px 24px;background:var(--bg-card);
+      border:1px solid var(--border);border-radius:12px;
+      font-size:.85rem;font-weight:600;color:var(--text-light);
+      white-space:nowrap;transition:all .3s ease;flex-shrink:0
+    }
+    .tech-item:hover{
+      border-color:var(--primary);color:var(--primary);
+      transform:translateY(-3px);box-shadow:0 4px 12px rgba(99,102,241,.15)
+    }
+    .tech-item i{font-size:1.2rem}
+
+    /* TESTIMONIALS */
+    .testimonials-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:24px
+    }
+    .testimonial-card{
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:32px;
+      position:relative;transition:all .35s ease
+    }
+    .testimonial-card:hover{
+      transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--primary-light)
+    }
+    .testimonial-card .quote-icon{
+      font-size:2rem;color:var(--primary);opacity:.2;margin-bottom:16px
+    }
+    .testimonial-card .testimonial-text{
+      font-size:.95rem;color:var(--text-light);line-height:1.8;
+      font-style:italic;margin-bottom:20px
+    }
+    .testimonial-card .testimonial-author{
+      display:flex;align-items:center;gap:14px;
+      padding-top:16px;border-top:1px solid var(--border)
+    }
+    .testimonial-card .author-avatar{
+      width:48px;height:48px;border-radius:50%;
+      background:var(--grad-1);display:flex;align-items:center;justify-content:center;
+      color:#fff;font-weight:700;font-size:1rem
+    }
+    .testimonial-card .author-info .author-name{
+      font-weight:700;font-size:.95rem
+    }
+    .testimonial-card .author-info .author-role{
+      font-size:.8rem;color:var(--text-muted)
+    }
+
+    /* CONTACT FORM */
+    .contact-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:40px;
+      align-items:start
+    }
+    .contact-info h3{font-size:1.3rem;font-weight:700;margin-bottom:12px}
+    .contact-info p{color:var(--text-light);margin-bottom:24px;line-height:1.7}
+    .contact-details .contact-item{
+      display:flex;align-items:center;gap:14px;
+      padding:14px 0;border-bottom:1px solid var(--border)
+    }
+    .contact-details .contact-item:last-child{border:0}
+    .contact-details .contact-icon{
+      width:44px;height:44px;border-radius:12px;
+      background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(139,92,246,.1));
+      display:flex;align-items:center;justify-content:center;
+      color:var(--primary);font-size:1rem;flex-shrink:0
+    }
+    .contact-details .contact-text .label{
+      font-size:.75rem;font-weight:600;color:var(--text-muted);
+      text-transform:uppercase;letter-spacing:1px
+    }
+    .contact-details .contact-text .value{
+      font-weight:600;font-size:.95rem
+    }
+    .contact-form{
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:32px
+    }
+    .contact-form .form-group{margin-bottom:18px}
+    .contact-form label{
+      display:block;font-size:.8rem;font-weight:600;
+      text-transform:uppercase;letter-spacing:1px;
+      color:var(--text-light);margin-bottom:8px
+    }
+    .contact-form input,.contact-form textarea{
+      width:100%;padding:14px 18px;border:1px solid var(--border);
+      border-radius:var(--radius-sm);background:var(--bg-alt);
+      color:var(--text);font-family:inherit;font-size:.9rem;
+      transition:all .25s ease;outline:none
+    }
+    .contact-form input:focus,.contact-form textarea:focus{
+      border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,.1)
+    }
+    .contact-form textarea{min-height:140px;resize:vertical}
+    .contact-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
     /* ===== RESPONSIVE ===== */
     @media(max-width:900px){
       .hero{flex-direction:column-reverse;text-align:center;padding:120px 24px 80px;gap:40px}
@@ -596,6 +774,14 @@
       .lightbox .lb-close{top:16px;right:16px}
       .lightbox .lb-caption{bottom:16px;font-size:.8rem}
       #backToTop{bottom:16px;right:16px;width:40px;height:40px}
+      .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+      .stat-card .stat-number{font-size:2rem}
+      .services-grid{grid-template-columns:1fr}
+      .testimonials-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr;gap:32px}
+      .contact-form .form-row{grid-template-columns:1fr}
+      .tech-track{gap:20px}
+      .tech-item{padding:10px 18px;font-size:.8rem}
     }
 
     /* ===== PRINT ===== */
@@ -617,6 +803,7 @@
       .hero .title-line{font-size:13px}
       .timeline-item::before{background:#000;box-shadow:0 0 0 2px #000}
       .timeline-item .period{background:none;padding:0;color:#000}
+      .stats-grid,.services-grid,.testimonials-grid,.contact-grid,.tech-scroll-wrapper{display:none!important}
       [data-theme=dark]{--text:#000!important;--text-light:#333!important}
     }
   </style>
@@ -645,12 +832,13 @@
     <a href="#" class="logo">Moshiur.</a>
     <ul id="navMenu">
       <li><a href="#summary">About</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#techstack">Tech Stack</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#download" class="dl-btn"><i class="fas fa-download"></i> Resume</a></li>
+      <li><a href="#contact" class="dl-btn"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
     <div class="nav-right">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
@@ -689,8 +877,38 @@
     <span class="tech-badge"><i class="fab fa-php"></i>PHP</span>
     <span class="tech-badge"><i class="fas fa-database"></i>MySQL</span>
     <span class="tech-badge"><i class="fab fa-docker"></i>Docker</span>
+    <span class="tech-badge"><i class="fab fa-aws"></i>AWS</span>
+    <span class="tech-badge"><i class="fab fa-git-alt"></i>Git</span>
   </div>
 </header>
+
+<!-- STATS -->
+<section id="stats" class="section-alt">
+  <div class="inner">
+    <div class="stats-grid">
+      <div class="stat-card reveal-scale delay-1">
+        <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+        <div class="stat-number" data-count="11">0</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card reveal-scale delay-2">
+        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+        <div class="stat-number" data-count="45">0</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-card reveal-scale delay-3">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-number" data-count="25">0</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card reveal-scale delay-4">
+        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+        <div class="stat-number" data-count="13">0</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- SUMMARY -->
 <section id="summary">
@@ -698,11 +916,53 @@
     <span class="section-label">About</span>
     <h2 class="section-title">Professional Summary</h2>
     <p class="summary-text">
-      Senior Backend Engineer and Technical Lead with 9+ years of professional experience building scalable SaaS, ERP, FinTech, and enterprise workflow systems using Laravel and modern backend technologies. Specialized in high-performance API architecture, database optimization, queue-based processing, Redis caching, and scalable cloud deployments. Proven track record of reducing API latency by over 90%, designing enterprise-grade multi-tenant systems, and leading cross-functional engineering teams to deliver reliable production solutions at scale.
+      Senior Laravel Developer and Technical Lead with 11+ years of hands-on experience architecting and delivering enterprise-grade SaaS, ERP, and FinTech platforms. I specialize in building high-performance backend systems that handle millions of transactions — from designing scalable multi-tenant architectures to optimizing API response times by over 90%.
     </p>
     <p class="summary-text" style="margin-top:16px;">
-      Strong expertise in Laravel, MySQL optimization, Redis caching, and cloud-based deployments, with hands-on experience collaborating across teams to deliver reliable, production-grade solutions.
+      My approach combines deep technical expertise with a strong product mindset. I've led cross-functional teams of 8+ developers, mentored junior engineers, and consistently delivered production systems that scale. Whether it's reducing a 12-second API call to under 1 second, processing 40k+ records through queue-based workflows, or architecting distributed systems — I focus on building solutions that are reliable, maintainable, and genuinely impactful.
     </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-alt">
+  <div class="inner">
+    <div class="reveal">
+      <span class="section-label">Expertise</span>
+      <h2 class="section-title">What I Do</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal-scale delay-1">
+        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Full-Stack Web Development</h3>
+        <p>I build complete web applications from concept to deployment — backend APIs, interactive frontends, and everything in between. Laravel, React, and modern tools are my go-to stack for delivering production-ready solutions.</p>
+      </div>
+      <div class="service-card reveal-scale delay-2">
+        <div class="service-icon"><i class="fas fa-database"></i></div>
+        <h3>Database Architecture &amp; Optimization</h3>
+        <p>From designing efficient schemas to rewriting slow queries, I ensure your data layer performs under pressure. I've personally optimized systems from 12-second response times down to sub-second performance through smart indexing and caching.</p>
+      </div>
+      <div class="service-card reveal-scale delay-3">
+        <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <h3>API Development &amp; Integration</h3>
+        <p>I design RESTful APIs that are clean, documented, and built to scale. Whether it's payment gateways, third-party services, or microservices architecture — I handle the complexity so your product stays reliable.</p>
+      </div>
+      <div class="service-card reveal-scale delay-1">
+        <div class="service-icon"><i class="fas fa-server"></i></div>
+        <h3>DevOps &amp; Cloud Infrastructure</h3>
+        <p>Docker containers, AWS deployments, CI/CD pipelines — I set up the infrastructure that lets your team ship fast and sleep well. Server management and deployment automation are part of my daily workflow.</p>
+      </div>
+      <div class="service-card reveal-scale delay-2">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Performance Engineering</h3>
+        <p>When systems slow down, I dig in. Queue-based processing, Redis caching, query optimization — I've reduced API latency by 90%+ on production systems handling millions of records.</p>
+      </div>
+      <div class="service-card reveal-scale delay-3">
+        <div class="service-icon"><i class="fas fa-users-cog"></i></div>
+        <h3>Technical Leadership &amp; Mentoring</h3>
+        <p>I lead engineering teams, conduct code reviews, and help developers grow. Great software comes from great teams — I focus on building both through clear communication and high standards.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -716,28 +976,107 @@
     <div class="skills-grid">
       <div class="skill-group reveal-left delay-1">
         <div class="icon-wrap"><i class="fas fa-server"></i></div>
-        <h3>Backend</h3>
-        <p>PHP, Laravel, System Design, REST APIs, Microservices Architecture</p>
+        <h3>Backend Engineering</h3>
+        <p>PHP 8+, Laravel 11+, RESTful APIs, Microservices, Queue Workers, Event-Driven Architecture, SOLID Principles, Design Patterns</p>
       </div>
       <div class="skill-group reveal-left delay-2">
         <div class="icon-wrap"><i class="fas fa-code"></i></div>
-        <h3>Frontend</h3>
-        <p>React, Inertia, Livewire, Vanilla JS, jQuery, Ajax, HTML5, CSS3, Bootstrap, Tailwind CSS</p>
+        <h3>Frontend Development</h3>
+        <p>React.js, Inertia.js, Livewire, Alpine.js, JavaScript (ES6+), jQuery, Ajax, HTML5, CSS3, Bootstrap, Tailwind CSS</p>
       </div>
       <div class="skill-group reveal-left delay-3">
         <div class="icon-wrap"><i class="fas fa-database"></i></div>
-        <h3>Databases &amp; Performance</h3>
-        <p>MySQL, PostgreSQL, Query Optimization, Indexing, Redis</p>
+        <h3>Database Systems &amp; Tools</h3>
+        <p>MySQL, PostgreSQL, Query Optimization, Indexing, Redis, Memcached, Schema Design, TablePlus, DBeaver</p>
       </div>
       <div class="skill-group reveal-left delay-4">
         <div class="icon-wrap"><i class="fas fa-cloud"></i></div>
-        <h3>DevOps &amp; Cloud</h3>
-        <p>Docker, AWS (EC2, S3), CI/CD, Linux (Ubuntu/Kali)</p>
+        <h3>DevOps &amp; Cloud Infrastructure</h3>
+        <p>Docker, AWS (EC2, S3, RDS), CI/CD Pipelines, Linux (Ubuntu), Nginx, Apache, Server Management, Deployment Automation</p>
+      </div>
+      <div class="skill-group reveal-left delay-1">
+        <div class="icon-wrap"><i class="fas fa-code-branch"></i></div>
+        <h3>Version Control &amp; Collaboration</h3>
+        <p>Git, GitHub, GitLab, Bitbucket, Branching Strategies, Code Reviews, Pull Requests, Merge Conflict Resolution</p>
+      </div>
+      <div class="skill-group reveal-left delay-2">
+        <div class="icon-wrap"><i class="fas fa-project-diagram"></i></div>
+        <h3>Project Management &amp; Agile</h3>
+        <p>Jira, Trello, Notion, Agile/Scrum, Sprint Planning, Backlog Grooming, User Stories, Technical Documentation</p>
+      </div>
+      <div class="skill-group reveal-left delay-3">
+        <div class="icon-wrap"><i class="fas fa-laptop-code"></i></div>
+        <h3>IDEs &amp; Development Environment</h3>
+        <p>VS Code, PhpStorm, Sublime Text, Cursor, Postman, XAMPP, MAMP, WAMP, Terminal &amp; CLI</p>
       </div>
       <div class="skill-group reveal-left delay-4">
-        <div class="icon-wrap"><i class="fas fa-tools"></i></div>
-        <h3>Development Tools</h3>
-        <p>Claude, ChatGPT, GitHub Copilot, LM Studio, Ollama, Cursor, Open Code</p>
+        <div class="icon-wrap"><i class="fas fa-brain"></i></div>
+        <h3>AI-Assisted Software Engineering</h3>
+        <p>Claude, ChatGPT, GitHub Copilot, Cursor AI, LM Studio, Ollama, Prompt Engineering, Code Generation</p>
+      </div>
+      <div class="skill-group reveal-left delay-1">
+        <div class="icon-wrap"><i class="fas fa-shield-alt"></i></div>
+        <h3>Testing &amp; Code Quality</h3>
+        <p>PHPUnit, Laravel Testing, TDD, Feature Testing, Unit Testing, Code Coverage, Static Analysis, Laravel Pint</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="techstack">
+  <div class="inner">
+    <div class="reveal">
+      <span class="section-label">Technology</span>
+      <h2 class="section-title">Tech Stack</h2>
+    </div>
+    <div class="tech-scroll-wrapper reveal delay-1">
+      <div class="tech-track">
+        <div class="tech-item"><i class="fab fa-php" style="color:#777bb4"></i> PHP</div>
+        <div class="tech-item"><i class="fab fa-laravel" style="color:#ff2d20"></i> Laravel</div>
+        <div class="tech-item"><i class="fab fa-react" style="color:#61dafb"></i> React</div>
+        <div class="tech-item"><i class="fab fa-js-square" style="color:#f7df1e"></i> JavaScript</div>
+        <div class="tech-item"><i class="fab fa-html5" style="color:#e34f26"></i> HTML5</div>
+        <div class="tech-item"><i class="fab fa-css3-alt" style="color:#1572b6"></i> CSS3</div>
+        <div class="tech-item"><i class="fab fa-bootstrap" style="color:#7952b3"></i> Bootstrap</div>
+        <div class="tech-item"><i class="fas fa-wind" style="color:#06b6d4"></i> Tailwind</div>
+        <div class="tech-item"><i class="fab fa-node-js" style="color:#339933"></i> Node.js</div>
+        <div class="tech-item"><i class="fas fa-database" style="color:#4479a1"></i> MySQL</div>
+        <div class="tech-item"><i class="fas fa-database" style="color:#336791"></i> PostgreSQL</div>
+        <div class="tech-item"><i class="fas fa-bolt" style="color:#dc382d"></i> Redis</div>
+        <div class="tech-item"><i class="fas fa-th-list" style="color:#4a90d9"></i> TablePlus</div>
+        <div class="tech-item"><i class="fas fa-elephant" style="color:#ff6633"></i> DBeaver</div>
+        <div class="tech-item"><i class="fab fa-docker" style="color:#2496ed"></i> Docker</div>
+        <div class="tech-item"><i class="fab fa-aws" style="color:#ff9900"></i> AWS</div>
+        <div class="tech-item"><i class="fab fa-git-alt" style="color:#f05032"></i> Git</div>
+        <div class="tech-item"><i class="fab fa-github" style="color:#181717"></i> GitHub</div>
+        <div class="tech-item"><i class="fab fa-gitlab" style="color:#fc6d26"></i> GitLab</div>
+        <div class="tech-item"><i class="fab fa-jira" style="color:#0052cc"></i> Jira</div>
+        <div class="tech-item"><i class="fab fa-linux" style="color:#fcc624"></i> Linux</div>
+        <div class="tech-item"><i class="fas fa-fire" style="color:#ff6b35"></i> Nginx</div>
+        <!-- Duplicates for seamless loop -->
+        <div class="tech-item"><i class="fab fa-php" style="color:#777bb4"></i> PHP</div>
+        <div class="tech-item"><i class="fab fa-laravel" style="color:#ff2d20"></i> Laravel</div>
+        <div class="tech-item"><i class="fab fa-react" style="color:#61dafb"></i> React</div>
+        <div class="tech-item"><i class="fab fa-js-square" style="color:#f7df1e"></i> JavaScript</div>
+        <div class="tech-item"><i class="fab fa-html5" style="color:#e34f26"></i> HTML5</div>
+        <div class="tech-item"><i class="fab fa-css3-alt" style="color:#1572b6"></i> CSS3</div>
+        <div class="tech-item"><i class="fab fa-bootstrap" style="color:#7952b3"></i> Bootstrap</div>
+        <div class="tech-item"><i class="fas fa-wind" style="color:#06b6d4"></i> Tailwind</div>
+        <div class="tech-item"><i class="fab fa-node-js" style="color:#339933"></i> Node.js</div>
+        <div class="tech-item"><i class="fas fa-database" style="color:#4479a1"></i> MySQL</div>
+        <div class="tech-item"><i class="fas fa-database" style="color:#336791"></i> PostgreSQL</div>
+        <div class="tech-item"><i class="fas fa-bolt" style="color:#dc382d"></i> Redis</div>
+        <div class="tech-item"><i class="fas fa-th-list" style="color:#4a90d9"></i> TablePlus</div>
+        <div class="tech-item"><i class="fas fa-elephant" style="color:#ff6633"></i> DBeaver</div>
+        <div class="tech-item"><i class="fab fa-docker" style="color:#2496ed"></i> Docker</div>
+        <div class="tech-item"><i class="fab fa-aws" style="color:#ff9900"></i> AWS</div>
+        <div class="tech-item"><i class="fab fa-git-alt" style="color:#f05032"></i> Git</div>
+        <div class="tech-item"><i class="fab fa-github" style="color:#181717"></i> GitHub</div>
+        <div class="tech-item"><i class="fab fa-gitlab" style="color:#fc6d26"></i> GitLab</div>
+        <div class="tech-item"><i class="fab fa-jira" style="color:#0052cc"></i> Jira</div>
+        <div class="tech-item"><i class="fab fa-linux" style="color:#fcc624"></i> Linux</div>
+        <div class="tech-item"><i class="fas fa-fire" style="color:#ff6b35"></i> Nginx</div>
       </div>
     </div>
   </div>
@@ -856,137 +1195,217 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="inner">
+    <div class="reveal">
+      <span class="section-label">Feedback</span>
+      <h2 class="section-title">What Colleagues Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal-scale delay-1">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <div class="testimonial-text">"Moshiur took our sluggish ERP system and transformed it completely. What used to take 12 seconds now loads in under a second. He doesn't just write code — he understands the business impact of every optimization."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">SK</div>
+          <div class="author-info">
+            <div class="author-name">Senior Engineer</div>
+            <div class="author-role">SSL Wireless</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal-scale delay-2">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <div class="testimonial-text">"I've worked with many developers, but Moshiur stands out for his ownership mentality. He treated our FinTech platform like it was his own product — always thinking about scalability, edge cases, and long-term maintainability."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">TM</div>
+          <div class="author-info">
+            <div class="author-name">Project Manager</div>
+            <div class="author-role">Japan MDB Co. Ltd.</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal-scale delay-3">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <div class="testimonial-text">"Our multi-tenant ERP now handles thousands of daily transactions seamlessly. Moshiur architected the entire system with a clear vision — and his team delivery skills made the rollout smooth. Highly recommend for complex projects."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">AH</div>
+          <div class="author-info">
+            <div class="author-name">Business Lead</div>
+            <div class="author-role">Enterprise Client</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CERTIFICATES -->
 <section id="certificates" class="section-alt">
   <div class="inner">
     <div class="reveal">
       <span class="section-label">Credentials</span>
       <h2 class="section-title">Licenses &amp; Certifications</h2>
+      <p style="color:var(--text-light);max-width:650px;margin-top:-30px;margin-bottom:32px;font-size:.95rem;line-height:1.7;">
+        Committed to continuous learning — here are my professional certifications across databases, AI, cybersecurity, and software development.
+      </p>
     </div>
     <div class="cert-filters reveal delay-1">
-      <button class="cert-filter active" data-filter="all">All</button>
-      <button class="cert-filter" data-filter="tech">Technology</button>
-      <button class="cert-filter" data-filter="security">Security</button>
+      <button class="cert-filter active" data-filter="all">All <span style="opacity:.6">(13)</span></button>
+      <button class="cert-filter" data-filter="sql">SQL &amp; Databases</button>
+      <button class="cert-filter" data-filter="ai">AI &amp; Machine Learning</button>
+      <button class="cert-filter" data-filter="security">Cyber Security</button>
+      <button class="cert-filter" data-filter="programming">Programming</button>
       <button class="cert-filter" data-filter="professional">Professional</button>
     </div>
     <div class="cert-grid">
-      <a class="cert-card reveal-scale delay-3" href="certifications/introduction-to-sql.jpg" target="_blank" rel="noopener" data-category="tech" data-index="0">
+      <!-- SQL & Databases -->
+      <a class="cert-card reveal-scale delay-1" href="certifications/introduction-to-sql.jpg" target="_blank" rel="noopener" data-category="sql" data-index="0">
         <img class="cert-img" src="certifications/introduction-to-sql.jpg" alt="Introduction to SQL" loading="lazy" />
-        <span class="cert-tag">Technology</span>
+        <span class="cert-tag">SQL &amp; Databases</span>
         <div class="cert-overlay">
           <div class="cert-title">Introduction to SQL</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Simplilearn SkillUp</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 20 June 2026</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Simplilearn SkillUp</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 20, 2026</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-3" href="certifications/introduction-to-the-fundamentals-of-databases.jpg" target="_blank" rel="noopener" data-category="tech" data-index="1">
-        <img class="cert-img" src="certifications/introduction-to-the-fundamentals-of-databases.jpg" alt="Introduction to the Fundamentals of Databases" loading="lazy" />
-        <span class="cert-tag">Technology</span>
+      <a class="cert-card reveal-scale delay-2" href="certifications/introduction-to-the-fundamentals-of-databases.jpg" target="_blank" rel="noopener" data-category="sql" data-index="1">
+        <img class="cert-img" src="certifications/introduction-to-the-fundamentals-of-databases.jpg" alt="Fundamentals of Databases" loading="lazy" />
+        <span class="cert-tag">SQL &amp; Databases</span>
         <div class="cert-overlay">
-          <div class="cert-title">Introduction to the Fundamentals of Databases</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Simplilearn SkillUp</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 18 June 2026</div>
+          <div class="cert-title">Fundamentals of Databases</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Simplilearn SkillUp</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 18, 2026</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-3" href="certifications/code-generation-with-generative-ai.jpg" target="_blank" rel="noopener" data-category="tech" data-index="2">
-        <img class="cert-img" src="certifications/code-generation-with-generative-ai.jpg" alt="Code Generation with Generative AI" loading="lazy" />
-        <span class="cert-tag">Technology</span>
-        <div class="cert-overlay">
-          <div class="cert-title">Code Generation with Generative AI</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Simplilearn SkillUp</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 17 June 2026</div>
-        </div>
-      </a>
-      <a class="cert-card reveal-scale delay-2" href="certifications/advanced-prompt-engineering.jpg" target="_blank" rel="noopener" data-category="tech" data-index="3">
-        <img class="cert-img" src="certifications/advanced-prompt-engineering.jpg" alt="Advanced Prompt Engineering" loading="lazy" />
-        <span class="cert-tag">Technology</span>
-        <div class="cert-overlay">
-          <div class="cert-title">Advanced Prompt Engineering</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Professional Development</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 16 June 2026</div>
-        </div>
-      </a>
-      <a class="cert-card reveal-scale delay-2" href="certifications/sql-query-optimization.jpg" target="_blank" rel="noopener" data-category="tech" data-index="4">
+      <a class="cert-card reveal-scale delay-3" href="certifications/sql-query-optimization.jpg" target="_blank" rel="noopener" data-category="sql" data-index="2">
         <img class="cert-img" src="certifications/sql-query-optimization.jpg" alt="SQL Query Optimization" loading="lazy" />
-        <span class="cert-tag">Technology</span>
+        <span class="cert-tag">SQL &amp; Databases</span>
         <div class="cert-overlay">
           <div class="cert-title">SQL Query Optimization</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Professional Development</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 13 June 2026</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Professional Development</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 13, 2026</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-1" href="certifications/claude-ai-fundamentals.jpg" target="_blank" rel="noopener" data-category="tech" data-index="5">
+      <a class="cert-card reveal-scale delay-1" href="certifications/sql-projects-hackerrank.jpg" target="_blank" rel="noopener" data-category="sql" data-index="3">
+        <img class="cert-img" src="certifications/sql-projects-hackerrank.jpg" alt="SQL for Data Analysis &amp; Management" loading="lazy" />
+        <span class="cert-tag">SQL &amp; Databases</span>
+        <div class="cert-overlay">
+          <div class="cert-title">SQL for Data Analysis &amp; Management</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> HackerRank</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 9, 2026</div>
+        </div>
+      </a>
+      <!-- AI & Machine Learning -->
+      <a class="cert-card reveal-scale delay-2" href="certifications/code-generation-with-generative-ai.jpg" target="_blank" rel="noopener" data-category="ai" data-index="4">
+        <img class="cert-img" src="certifications/code-generation-with-generative-ai.jpg" alt="Code Generation with Generative AI" loading="lazy" />
+        <span class="cert-tag">AI &amp; ML</span>
+        <div class="cert-overlay">
+          <div class="cert-title">Code Generation with Generative AI</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Simplilearn SkillUp</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 17, 2026</div>
+        </div>
+      </a>
+      <a class="cert-card reveal-scale delay-3" href="certifications/advanced-prompt-engineering.jpg" target="_blank" rel="noopener" data-category="ai" data-index="5">
+        <img class="cert-img" src="certifications/advanced-prompt-engineering.jpg" alt="Advanced Prompt Engineering" loading="lazy" />
+        <span class="cert-tag">AI &amp; ML</span>
+        <div class="cert-overlay">
+          <div class="cert-title">Advanced Prompt Engineering</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Professional Development</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 16, 2026</div>
+        </div>
+      </a>
+      <a class="cert-card reveal-scale delay-1" href="certifications/claude-ai-fundamentals.jpg" target="_blank" rel="noopener" data-category="ai" data-index="6">
         <img class="cert-img" src="certifications/claude-ai-fundamentals.jpg" alt="Claude AI Fundamentals" loading="lazy" />
-        <span class="cert-tag">Technology</span>
+        <span class="cert-tag">AI &amp; ML</span>
         <div class="cert-overlay">
           <div class="cert-title">Claude AI Fundamentals</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Anthropic</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 13 June 2026</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Anthropic</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 13, 2026</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-3" href="certifications/cyber-security-leadership.jpg" target="_blank" rel="noopener" data-category="security" data-index="6">
-        <img class="cert-img" src="certifications/cyber-security-leadership.jpg" alt="Cyber Security Leadership Certification" loading="lazy" />
+      <!-- Cyber Security -->
+      <a class="cert-card reveal-scale delay-2" href="certifications/cyber-security-leadership.jpg" target="_blank" rel="noopener" data-category="security" data-index="7">
+        <img class="cert-img" src="certifications/cyber-security-leadership.jpg" alt="Cyber Security Leadership" loading="lazy" />
         <span class="cert-tag">Security</span>
         <div class="cert-overlay">
           <div class="cert-title">Cyber Security Leadership</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Professional Certification</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 11 June 2026</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Professional Certification</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 11, 2026</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-1" href="certifications/sql-projects-hackerrank.jpg" target="_blank" rel="noopener" data-category="tech" data-index="7">
-        <img class="cert-img" src="certifications/sql-projects-hackerrank.jpg" alt="SQL for Data Analysis &amp; Database Management" loading="lazy" />
-        <span class="cert-tag">Technology</span>
-        <div class="cert-overlay">
-          <div class="cert-title">SQL for Data Analysis &amp; Management</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> HackerRank</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 9 June 2026</div>
-        </div>
-      </a>
-      <a class="cert-card reveal-scale delay-1" href="certifications/introduction-to-cybersecurity-cisco.jpg" target="_blank" rel="noopener" data-category="security" data-index="8">
-        <img class="cert-img" src="certifications/introduction-to-cybersecurity-cisco.jpg" alt="Cisco Certified Introduction to Cybersecurity" loading="lazy" />
+      <a class="cert-card reveal-scale delay-3" href="certifications/introduction-to-cybersecurity-cisco.jpg" target="_blank" rel="noopener" data-category="security" data-index="8">
+        <img class="cert-img" src="certifications/introduction-to-cybersecurity-cisco.jpg" alt="Introduction to Cybersecurity" loading="lazy" />
         <span class="cert-tag">Security</span>
         <div class="cert-overlay">
           <div class="cert-title">Introduction to Cybersecurity</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 24 April 2026</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Cisco Networking Academy</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> April 24, 2026</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-2" href="certifications/cyber-hygiene-training-asia-foundation.jpg" target="_blank" rel="noopener" data-category="security" data-index="9">
-        <img class="cert-img" src="certifications/cyber-hygiene-training-asia-foundation.jpg" alt="Cyber Hygiene &amp; Digital Security Training" loading="lazy" />
+      <a class="cert-card reveal-scale delay-1" href="certifications/cyber-hygiene-training-asia-foundation.jpg" target="_blank" rel="noopener" data-category="security" data-index="9">
+        <img class="cert-img" src="certifications/cyber-hygiene-training-asia-foundation.jpg" alt="Cyber Hygiene &amp; Digital Security" loading="lazy" />
         <span class="cert-tag">Security</span>
         <div class="cert-overlay">
           <div class="cert-title">Cyber Hygiene &amp; Digital Security</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> The Asia Foundation</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 23 April 2026</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> The Asia Foundation</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> April 23, 2026</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-2" href="certifications/php-fundamentals-sololearn.jpg" target="_blank" rel="noopener" data-category="tech" data-index="10">
+      <!-- Programming -->
+      <a class="cert-card reveal-scale delay-2" href="certifications/php-fundamentals-sololearn.jpg" target="_blank" rel="noopener" data-category="programming" data-index="10">
         <img class="cert-img" src="certifications/php-fundamentals-sololearn.jpg" alt="PHP Web Development Fundamentals" loading="lazy" />
-        <span class="cert-tag">Technology</span>
+        <span class="cert-tag">Programming</span>
         <div class="cert-overlay">
           <div class="cert-title">PHP Web Development Fundamentals</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> SoloLearn</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 12 June 2016</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> SoloLearn</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 12, 2016</div>
         </div>
       </a>
+      <!-- Professional -->
       <a class="cert-card reveal-scale delay-1" href="certifications/agile-bangladesh-conference-2015.jpg" target="_blank" rel="noopener" data-category="professional" data-index="11">
         <img class="cert-img" src="certifications/agile-bangladesh-conference-2015.jpg" alt="Agile Bangladesh Conference 2015" loading="lazy" />
         <span class="cert-tag">Professional</span>
         <div class="cert-overlay">
           <div class="cert-title">Agile Bangladesh Conference 2015</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> DIIT</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 12 June 2015</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> DIIT</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> June 12, 2015</div>
         </div>
       </a>
-      <a class="cert-card reveal-scale delay-1" href="certifications/national-debate-championship-2013.jpg" target="_blank" rel="noopener" data-category="professional" data-index="12">
+      <a class="cert-card reveal-scale delay-3" href="certifications/national-debate-championship-2013.jpg" target="_blank" rel="noopener" data-category="professional" data-index="12">
         <img class="cert-img" src="certifications/national-debate-championship-2013.jpg" alt="National Debate Championship 2013" loading="lazy" />
         <span class="cert-tag">Professional</span>
         <div class="cert-overlay">
           <div class="cert-title">National Debate Championship 2013</div>
-          <div class="cert-issuer"><i class="fas fa-building"></i> Debate Bangladesh</div>
-          <div class="cert-date"><i class="far fa-calendar-alt"></i> 23 October 2013</div>
+          <div class="cert-issuer"><i class="fas fa-award"></i> Debate Bangladesh</div>
+          <div class="cert-date"><i class="far fa-calendar-alt"></i> October 23, 2013</div>
         </div>
       </a>
+    </div>
+    <!-- Category Summary -->
+    <div class="reveal delay-2" style="margin-top:40px;padding:24px 28px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center;">
+        <div>
+          <div style="font-size:1.8rem;font-weight:800;background:var(--grad-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">4</div>
+          <div style="font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;">SQL &amp; Databases</div>
+        </div>
+        <div>
+          <div style="font-size:1.8rem;font-weight:800;background:var(--grad-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">3</div>
+          <div style="font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;">AI &amp; ML</div>
+        </div>
+        <div>
+          <div style="font-size:1.8rem;font-weight:800;background:var(--grad-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">3</div>
+          <div style="font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;">Cyber Security</div>
+        </div>
+        <div>
+          <div style="font-size:1.8rem;font-weight:800;background:var(--grad-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">1</div>
+          <div style="font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;">Programming</div>
+        </div>
+        <div>
+          <div style="font-size:1.8rem;font-weight:800;background:var(--grad-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">2</div>
+          <div style="font-size:.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;">Professional</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1038,6 +1457,77 @@
         <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
           <span style="font-size:.85rem;color:var(--text-muted);"><i class="fas fa-print"></i> References available upon request</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-alt">
+  <div class="inner">
+    <div class="reveal">
+      <span class="section-label">Reach Out</span>
+      <h2 class="section-title">Get In Touch</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left delay-1">
+        <h3>Let's Work Together</h3>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-text">
+              <div class="label">Email</div>
+              <div class="value">moshiur1412@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-text">
+              <div class="label">Phone</div>
+              <div class="value">+8801722 652 770</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-text">
+              <div class="label">Location</div>
+              <div class="value">Dhaka, Bangladesh</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="contact-text">
+              <div class="label">LinkedIn</div>
+              <div class="value">linkedin.com/in/moshiur1412</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal-right delay-2">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
       </div>
     </div>
   </div>
@@ -1108,6 +1598,27 @@
     })
   },{threshold:.1});
   revealEls.forEach(el=>observer.observe(el));
+
+  // ===== STAT COUNTER =====
+  const statCards=document.querySelectorAll('.stat-number[data-count]');
+  const statObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el=entry.target;
+        const target=parseInt(el.dataset.count);
+        const duration=2000;
+        const step=target/(duration/16);
+        let current=0;
+        const timer=setInterval(()=>{
+          current+=step;
+          if(current>=target){current=target;clearInterval(timer)}
+          el.textContent=Math.floor(current)+'+';
+        },16);
+        statObserver.unobserve(el);
+      }
+    })
+  },{threshold:.5});
+  statCards.forEach(el=>statObserver.observe(el));
 
   // ===== SCROLL SPY =====
   const sections=document.querySelectorAll('section[id],header.hero');
