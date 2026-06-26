@@ -9,9 +9,10 @@ When working on this portfolio project, follow these rules:
 ## Project Overview
 
 - **Type:** Static portfolio website (single-page)
-- **Tech:** HTML5, CSS3, Vanilla JavaScript (no frameworks)
+- **Tech:** HTML5, CSS3, Vanilla JavaScript (no frameworks, no Node)
 - **Purpose:** Professional portfolio for MD. Moshiur Rahman — Senior Laravel Developer & Technical Lead
 - **Deployment:** GitHub Pages
+- **Local Dev:** VS Code Live Server extension
 
 ---
 
@@ -30,7 +31,7 @@ When working on this portfolio project, follow these rules:
 | Years Experience | 11+ | Jan 2015 – Present (2026) |
 | Projects Delivered | 45+ | 4 companies + enterprise work |
 | Happy Clients | 25+ | Multiple companies + clients |
-| Certifications | 13 | Verified from certificate images |
+| Certifications | 15 | Verified from certificate images |
 
 ### Certificate Categories
 | Category | Count | Certificates |
@@ -39,7 +40,7 @@ When working on this portfolio project, follow these rules:
 | AI & ML | 3 | Generative AI, Prompt Engineering, Claude AI |
 | Cyber Security | 3 | Security Leadership, Intro Cybersecurity, Cyber Hygiene |
 | Programming | 1 | PHP Fundamentals |
-| Professional | 2 | Agile Conference, Debate Championship |
+| Professional | 4 | Agile Conference, Debate Championship, Elevate Your Public Speaking, Excel Essentials |
 
 ---
 
@@ -61,7 +62,7 @@ When working on this portfolio project, follow these rules:
 ### Spacing
 - Section padding: 90px 24px
 - Card border-radius: 16px
-- Max width: 1120px
+- Max width: 1120px (1400px for Learning Hub)
 
 ---
 
@@ -73,8 +74,34 @@ When working on this portfolio project, follow these rules:
 4. Tech Stack (Scrolling marquee)
 5. Experience (Timeline)
 6. Projects (Key Contributions)
-7. Certificates (Licenses & Certifications)
-8. Contact (Get In Touch)
+7. Learning (Knowledge Hub — Accordion)
+8. Certificates (Licenses & Certifications)
+9. Contact (Get In Touch)
+
+---
+
+## Architecture
+
+### External Files
+| File | Purpose |
+|---|---|
+| `index.html` | All HTML content and structure |
+| `styles/main.css` | All CSS styles |
+| `styles/main.js` | All JavaScript (fetch, accordion, theme, etc.) |
+| `learning/**/*.md` | Markdown articles fetched at runtime |
+
+### How Learning Hub Works
+1. `index.html` has accordion links with `data-id` pointing to `.md` files
+2. `main.js` `loadArticle()` fetches the `.md` file from `learning/` directory
+3. `marked.js` (CDN) parses markdown to HTML client-side
+4. Parsed HTML is rendered in `#article-view` container
+5. `mermaid.js` (CDN) renders any diagram code blocks
+
+### CDN Dependencies
+- **marked.js** — markdown parser (loaded in `<head>`)
+- **mermaid.js** — diagram renderer (loaded in `<head>`)
+- **Font Awesome 6** — icons
+- **Google Fonts** — Inter + JetBrains Mono
 
 ---
 
@@ -117,22 +144,77 @@ When working on this portfolio project, follow these rules:
 
 ---
 
-## Files to Edit
+## Knowledge Sharing
 
-| File | Purpose |
-|---|---|
-| `index.html` | All content, styles, and scripts (single file) |
-| `certifications/` | Certificate images |
-| `md-moshiur-rahman-profile.jpg` | Profile photo |
-| `resume_of_md_moshiur_rahman.pdf` | Downloadable PDF resume |
-| `README.md` | Project documentation |
+### Structure
+```
+learning/
+├── 01-php-laravel/              # PHP & Laravel
+│   ├── 01-php-basics/
+│   ├── 02-string-functions/
+│   ├── 03-array-functions/
+│   ├── 04-oop/
+│   ├── 05-laravel/
+│   ├── 06-database/
+│   ├── 07-api/
+│   └── 08-interview/
+├── 02-software-engineering/  # Software Engineering
+│   ├── 01-clean-code/
+│   ├── 02-design-patterns/
+│   ├── 03-architecture/
+│   ├── 04-system-design/
+│   ├── 05-security/
+│   ├── 06-performance/
+│   └── 07-devops/
+└── 03-case-studies/          # Real Project Case Studies
+    ├── 01-ssl-wireless/
+    ├── 02-erp-projects/
+    ├── 03-saas-projects/
+    ├── 04-problems-solved/
+    ├── 05-interview-stories/
+    └── 06-debug-diary/
+```
+
+### Naming Convention
+- **Folders:** kebab-case (`01-php-basics/`)
+- **Cover files:** `cover.md` (one per subcategory, lists all planned topics)
+- **Article files:** `XX-kebab-case.md` (e.g., `01-print-vs-echo.md`)
+
+### Cover File Format
+```markdown
+# Category Title
+
+1. Topic One
+2. Topic Two
+...
+```
+
+### Article File Structure (Bilingual)
+Each article follows this template:
+1. Definition Table
+2. Internal Working / Flow Diagram
+3. Code Examples
+4. Output
+5. Real Project Example
+6. Interview Answer (Bangla + English)
+7. Common Mistakes
+8. Follow-up Questions
+9. Memory Tricks
+10. Summary & Revision Checklist
+
+### Adding New Articles
+1. Create `XX-kebab-case.md` in the appropriate subfolder
+2. Follow the bilingual article template
+3. Update the subfolder's `cover.md` if adding a new topic
+4. Update the `A` object in `styles/main.js` with the new article entry
+5. The Learning Hub accordion in `index.html` auto-reflects folder structure
 
 ---
 
 ## Do NOT
 
-- Add external CSS/JS files (everything is inline in index.html)
 - Use frameworks (React, Vue, etc.) — keep it pure HTML/CSS/JS
+- Use Node.js or build tools — site is fully static
 - Add comments in code unless specifically asked
 - Change the color scheme without explicit instruction
 - Remove existing sections without confirmation
@@ -153,5 +235,7 @@ When working on this portfolio project, follow these rules:
 
 ## Version History
 
-- **v2.0** (June 2026) — Full redesign with 9 skill categories, 13 certificates, stats, services, testimonials, contact
+- **v3.0** (June 2026) — External JS/CSS, fetch-based Learning Hub (no build step, no node_modules)
+- **v2.1** (June 2026) — Learning Hub: 24 articles across 8 subcategories
+- **v2.0** (June 2026) — Full redesign with 9 skill categories, 15 certificates, stats, services, testimonials, contact
 - **v1.0** — Initial portfolio with basic sections

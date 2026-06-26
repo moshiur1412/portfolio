@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "a13801e65a201dc0",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5c6726eda98171f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "026e9c6961b84ac9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03-api-optimization"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "477bec78e0016ae8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7c4065aa6759a6c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "07ed71d63293dad1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8db6bc538e1da024",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "66ca63dcb4d239c3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4f4a9dbfef6045bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "a71bfa314f9c233f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6cbae82924d7d455",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 03-api-optimization"
+            }
+          },
+          {
+            "id": "ab505d68e24f751f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 03-api-optimization"
+            }
+          },
+          {
+            "id": "c2d260b4dfd1e934",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "18934fcdfa49893e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "2af49e8de7b9091f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 03-api-optimization"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "026e9c6961b84ac9",
+  "lastOpenFiles": [
+    "learning/03-case-studies/01-ssl-wireless/02-large-data-export.md",
+    "learning/03-case-studies/02-erp-projects/03-billing-system.md",
+    "learning/03-case-studies/02-erp-projects/02-subscription-management.md",
+    "learning/03-case-studies/02-erp-projects/01-multi-tenancy.md",
+    "learning/03-case-studies/01-ssl-wireless/01-report-optimization.md",
+    "learning/02-software-engineering/03-architecture/02-layered-architecture.md",
+    "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
+    "learning/02-software-engineering/03-architecture/01-mvc-architecture.md",
+    "learning/02-software-engineering/01-clean-code/02-functions.md",
+    "learning/02-software-engineering/01-clean-code/03-comments.md",
+    "learning/02-software-engineering/01-clean-code/01-naming-cnonventions.md",
+    "learning/01-php-laravel/02-string-functions/01-strcmp.md",
+    "learning/01-php-laravel/02-string-functions/cover.md",
+    "learning/02-software-engineering/03-architecture/03-hexagonal-architecture.md",
+    "learning/02-software-engineering/03-architecture/01-mvc.md",
+    "learning/02-software-engineering/02-design-patterns/03-repository.md",
+    "learning/02-software-engineering/02-design-patterns/02-factory.md",
+    "learning/02-software-engineering/02-design-patterns/01-singleton.md",
+    "learning/02-software-engineering/01-clean-code/01-naming-nonventions.md",
+    "learning/01-php-laravel/03-array-functions/03-array-reduce.md",
+    "learning/01-php-laravel/03-array-functions/02-array-filter.md",
+    "learning/01-php-laravel/03-array-functions/01-array-map.md",
+    "learning/01-php-laravel/02-string-functions/03-strcasecmp.md",
+    "learning/01-php-laravel/02-string-functions/02-strncmp.md",
+    "learning/01-php-laravel/02-string-functions/Strncmp.md",
+    "learning/01-php-laravel/01-php-basics/cover.md",
+    "learning/03-case-studies/06-debug-diary",
+    "learning/03-case-studies/05-interview-stories",
+    "learning/03-case-studies/04-problems-solved",
+    "learning/03-case-studies/03-saas-projects",
+    "learning/03-case-studies/02-erp-projects",
+    "learning/03-case-studies/01-ssl-wireless",
+    "learning/02-software-engineering/07-devops",
+    "learning/02-software-engineering/06-performance",
+    "learning/02-software-engineering/05-security",
+    "learning/02-software-engineering/04-system-design"
+  ]
+}
