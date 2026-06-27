@@ -10,17 +10,17 @@
 
 # Table of Contents
 
-* [Project Overview](https://www.google.com/search?q=%23project-overview)
-* [Business Background & Problem Statement](https://www.google.com/search?q=%23business-background--problem-statement)
-* [System Bottlenecks & Metrics](https://www.google.com/search?q=%23system-bottlenecks--metrics)
-* [Root Cause Analysis (RCA)](https://www.google.com/search?q=%23root-cause-analysis-rca)
-* [Optimization Architecture](https://www.google.com/search?q=%23optimization-architecture)
-* [Core Optimization Strategies](https://www.google.com/search?q=%23core-optimization-strategies)
-* [Code Implementation (Before vs After)](https://www.google.com/search?q=%23code-implementation-before-vs-after)
-* [Performance Benchmarks](https://www.google.com/search?q=%23performance-benchmarks)
-* [Security & Rate Limiting](https://www.google.com/search?q=%23security--rate-limiting)
-* [Key Lessons Learned](https://www.google.com/search?q=%23key-lessons-learned)
-* [Interview STAR Story](https://www.google.com/search?q=%23interview-star-story)
+* [Project Overview](#project-overview)
+* [Business Background & Problem Statement](#business-background--problem-statement)
+* [System Bottlenecks & Metrics](#system-bottlenecks--metrics)
+* [Root Cause Analysis (RCA)](#root-cause-analysis-rca)
+* [Optimization Architecture](#optimization-architecture)
+* [Core Optimization Strategies](#core-optimization-strategies)
+* [Code Implementation (Before vs After)](#code-implementation-before-vs-after)
+* [Performance Benchmarks](#performance-benchmarks)
+* [Security & Rate Limiting](#security--rate-limiting)
+* [Key Lessons Learned](#key-lessons-learned)
+* [Interview STAR Story](#interview-star-story)
 
 ---
 

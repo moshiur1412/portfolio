@@ -6,28 +6,28 @@
 
 # Table of Contents
 
-* Project Overview
-* Business Background
-* Business Requirements
-* Existing System
-* Challenges
-* Root Cause Analysis
-* Solution Design
-* Architecture
-* Database Design
-* System Flow
-* API Flow
-* Implementation
-* Code Highlights
-* Performance Optimization
-* Security Considerations
-* Testing Strategy
-* Deployment Strategy
-* Monitoring
-* Challenges During Development
-* Production Issues
-* Lessons Learned
-* Interview Story
+* [Project Overview](#project-overview)
+* [Business Background](#business-background)
+* [Business Requirements](#business-requirements)
+* [Existing System](#existing-system)
+* [Challenges](#challenges)
+* [Root Cause Analysis](#root-cause-analysis)
+* [Solution Design](#solution-design)
+* [Architecture](#architecture)
+* [Database Design](#database-design)
+* [System Flow](#system-flow)
+* [API Flow](#api-flow)
+* [Implementation](#implementation)
+* [Code Highlights](#code-highlights)
+* [Performance Optimization](#performance-optimization)
+* [Security Considerations](#security-considerations)
+* [Testing Strategy](#testing-strategy)
+* [Deployment Strategy](#deployment-strategy)
+* [Monitoring](#monitoring)
+* [Challenges During Development](#challenges-during-development)
+* [Production Issues](#production-issues)
+* [Lessons Learned](#lessons-learned)
+* [Interview Story](#interview-story)
 * Alternative Solutions
 * Future Improvements
 * Tech Stack

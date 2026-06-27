@@ -6,23 +6,23 @@
 
 # Table of Contents
 
-* Definition
-* Why Important
-* Problem Statement
-* Architecture
-* Internal Working
-* Flow Diagram
-* Advantages
-* Disadvantages
-* Trade-offs
-* Real Project Example
-* Best Practices
-* Performance Considerations
-* Common Mistakes
-* Anti Patterns
-* Related Concepts
-* Summary
-* References
+* [Definition](#definition)
+* [Why Important](#why-important)
+* [Problem Statement](#problem-statement)
+* [Architecture](#architecture)
+* [Internal Working](#internal-working)
+* [Flow Diagram](#flow-diagram)
+* [Advantages](#advantages)
+* [Disadvantages](#disadvantages)
+* [Trade-offs](#trade-offs)
+* [Real Project Example](#real-project-example)
+* [Best Practices](#best-practices)
+* [Performance Considerations](#performance-considerations)
+* [Common Mistakes](#common-mistakes)
+* [Anti Patterns](#anti-patterns)
+* [Related Concepts](#related-concepts)
+* [Summary](#summary)
+* [References](#references)
 
 ---
 

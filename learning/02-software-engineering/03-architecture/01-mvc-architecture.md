@@ -6,28 +6,26 @@
 
 # Table of Contents
 
-* [Definition](https://www.google.com/search?q=%23definition)
-* [Simple Definition](https://www.google.com/search?q=%23simple-definition)
-* [Official Definition](https://www.google.com/search?q=%23official-definition)
-* [Architecture Goal](https://www.google.com/search?q=%23architecture-goal)
-
-
-* [Why Important](https://www.google.com/search?q=%23why-important)
-* [Problem Statement](https://www.google.com/search?q=%23problem-statement)
-* [Architecture](https://www.google.com/search?q=%23architecture)
-* [Internal Working](https://www.google.com/search?q=%23internal-working)
-* [Flow Diagram](https://www.google.com/search?q=%23flow-diagram)
-* [Advantages](https://www.google.com/search?q=%23advantages)
-* [Disadvantages](https://www.google.com/search?q=%23disadvantages)
-* [Trade-offs](https://www.google.com/search?q=%23trade-offs)
-* [Real Project Example](https://www.google.com/search?q=%23real-project-example)
-* [Best Practices](https://www.google.com/search?q=%23best-practices)
-* [Performance Considerations](https://www.google.com/search?q=%23performance-considerations)
-* [Common Mistakes](https://www.google.com/search?q=%23common-mistakes)
-* [Anti Patterns](https://www.google.com/search?q=%23anti-patterns)
-* [Related Concepts](https://www.google.com/search?q=%23related-concepts)
-* [Summary](https://www.google.com/search?q=%23summary)
-* [References](https://www.google.com/search?q=%23references)
+* [Definition](#definition)
+* [Simple Definition](#simple-definition)
+* [Official Definition](#official-definition)
+* [Architecture Goal](#architecture-goal)
+* [Why Important](#why-important)
+* [Problem Statement](#problem-statement)
+* [Architecture](#architecture)
+* [Internal Working](#internal-working)
+* [Flow Diagram](#flow-diagram)
+* [Advantages](#advantages)
+* [Disadvantages](#disadvantages)
+* [Trade-offs](#trade-offs)
+* [Real Project Example](#real-project-example)
+* [Best Practices](#best-practices)
+* [Performance Considerations](#performance-considerations)
+* [Common Mistakes](#common-mistakes)
+* [Anti Patterns](#anti-patterns)
+* [Related Concepts](#related-concepts)
+* [Summary](#summary)
+* [References](#references)
 
 ---
 

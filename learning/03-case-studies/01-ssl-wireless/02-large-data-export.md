@@ -10,17 +10,17 @@
 
 # Table of Contents
 
-* [Project Overview](https://www.google.com/search?q=%23project-overview)
-* [Business Background & Problem Statement](https://www.google.com/search?q=%23business-background--problem-statement)
-* [System Challenges](https://www.google.com/search?q=%23system-challenges)
-* [Root Cause Analysis (RCA)](https://www.google.com/search?q=%23root-cause-analysis-rca)
-* [Target Architecture & Solution Design](https://www.google.com/search?q=%23target-architecture--solution-design)
-* [Database Performance & Indexing Strategy](https://www.google.com/search?q=%23database-performance--indexing-strategy)
-* [Core Code Implementation](https://www.google.com/search?q=%23core-code-implementation)
-* [Performance Benchmarks](https://www.google.com/search?q=%23performance-benchmarks)
-* [Production Monitoring & Fail-Safe Mechanism](https://www.google.com/search?q=%23production-monitoring--fail-safe-mechanism)
-* [Key Lessons Learned](https://www.google.com/search?q=%23key-lessons-learned)
-* [Interview STAR Story](https://www.google.com/search?q=%23interview-star-story)
+* [Project Overview](#project-overview)
+* [Business Background & Problem Statement](#business-background--problem-statement)
+* [System Challenges](#system-challenges)
+* [Root Cause Analysis (RCA)](#root-cause-analysis-rca)
+* [Target Architecture & Solution Design](#target-architecture--solution-design)
+* [Database Performance & Indexing Strategy](#database-performance--indexing-strategy)
+* [Core Code Implementation](#core-code-implementation)
+* [Performance Benchmarks](#performance-benchmarks)
+* [Production Monitoring & Fail-Safe Mechanism](#production-monitoring--fail-safe-mechanism)
+* [Key Lessons Learned](#key-lessons-learned)
+* [Interview STAR Story](#interview-star-story)
 
 ---
 

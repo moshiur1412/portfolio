@@ -244,7 +244,6 @@
     /* ===== SECTIONS ===== */
     section{padding:90px 24px}
     section .inner{max-width:var(--max-w);margin:0 auto}
-    #learning .inner{max-width:1400px}
     .section-label{
       display:inline-flex;align-items:center;gap:8px;
       font-size:.7rem;font-weight:700;text-transform:uppercase;
@@ -835,7 +834,14 @@
       [data-theme=dark]{--text:#000!important;--text-light:#333!important}
     }
 /* ===== ARTICLE VIEW ===== */
-#article-view{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;margin-top:40px}
+#article-view{
+  width:100%;margin:0 auto;padding:40px 24px 60px;
+  max-width:100%;box-sizing:border-box;
+  background:var(--bg-card);
+}
+#article-view .md-content{
+  max-width:900px;margin:0 auto;
+}
 #article-view h1{font-size:1.8rem;margin-bottom:8px}
 #article-view h2{font-size:1.3rem;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
 #article-view h3{font-size:1.1rem;margin:24px 0 8px}

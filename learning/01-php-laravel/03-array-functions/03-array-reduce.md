@@ -6,23 +6,23 @@ PHP-এর একটি অত্যন্ত শক্তিশালী Built-
 
 # Table of Contents
 
-* Definition
-* Why Important
-* Comparison
-* Internal Working
-* Flow Diagram
-* Code Examples
-* Output
-* Real Project Example
-* Interview Answer (বাংলা)
-* Interview Answer (English)
-* Common Mistakes
-* Follow-up Questions
-* Performance Notes
-* Best Practices
-* Memory Tricks
-* Summary
-* Revision Checklist
+* [Definition](#definition)
+* [Why Important](#why-important)
+* [Comparison](#comparison)
+* [Internal Working](#internal-working)
+* [Flow Diagram](#flow-diagram)
+* [Code Examples](#code-examples)
+* [Output](#output)
+* [Real Project Example](#real-project-example)
+* [Interview Answer (বাংলা)](#interview-answer-বাংলা)
+* [Interview Answer (English)](#interview-answer-english)
+* [Common Mistakes](#common-mistakes)
+* [Follow-up Questions](#follow-up-questions)
+* [Performance Notes](#performance-notes)
+* [Best Practices](#best-practices)
+* [Memory Tricks](#memory-tricks)
+* [Summary](#summary)
+* [Revision Checklist](#revision-checklist)
 
 ---
 
