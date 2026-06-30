@@ -265,6 +265,41 @@
     .summary-text{
       font-size:1.05rem;color:var(--text-light);max-width:920px;line-height:1.9
     }
+    .summary-layout{
+      display:flex;align-items:center;gap:56px
+    }
+    .summary-content{flex:1}
+    .summary-photo{
+      flex-shrink:0;position:relative
+    }
+    .photo-frame{
+      position:relative;width:280px;height:340px;
+      background:var(--bg-card);border-radius:20px;
+      padding:12px;box-shadow:var(--shadow-lg);
+      border:1px solid var(--border)
+    }
+    .photo-frame::before{
+      content:'';position:absolute;top:-8px;right:-8px;
+      width:80px;height:80px;border-radius:16px;
+      background:var(--grad-1);opacity:.1;z-index:-1
+    }
+    .photo-frame::after{
+      content:'';position:absolute;bottom:-8px;left:-8px;
+      width:60px;height:60px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--primary));
+      opacity:.1;z-index:-1
+    }
+    .photo-border{
+      width:100%;height:100%;border-radius:14px;overflow:hidden;
+      position:relative
+    }
+    .photo-border img{
+      width:100%;height:100%;object-fit:cover;
+      display:block;transition:transform .5s ease
+    }
+    .photo-frame:hover .photo-border img{
+      transform:scale(1.05)
+    }
 
     /* SKILLS */
     .skills-grid{
@@ -771,6 +806,9 @@
       .contact-form .form-row{grid-template-columns:1fr}
       .tech-track{gap:20px}
       .tech-item{padding:10px 18px;font-size:.8rem}
+      .summary-layout{flex-direction:column;gap:40px}
+      .summary-photo{order:-1}
+      .photo-frame{width:220px;height:270px}
     }
 
     /* ===== LEARNING HUB ACCORDION ===== */

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c5c6726eda98171f",
+        "id": "6eeae6a5d9a4d9bf",
         "type": "tabs",
         "children": [
           {
-            "id": "026e9c6961b84ac9",
+            "id": "4fffbd0a13b4ffaa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
+                "file": "2026-06-27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-api-optimization"
+              "title": "2026-06-27"
             }
           }
         ]
@@ -34,19 +34,6 @@
         "id": "e7c4065aa6759a6c",
         "type": "tabs",
         "children": [
-          {
-            "id": "07ed71d63293dad1",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
           {
             "id": "8db6bc538e1da024",
             "type": "leaf",
@@ -183,15 +170,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "026e9c6961b84ac9",
+  "active": "4fffbd0a13b4ffaa",
   "lastOpenFiles": [
+    "Untitled 1.canvas",
+    "2026-06-27.md",
+    "Untitled.base",
+    "Untitled.canvas",
+    "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
     "learning/03-case-studies/01-ssl-wireless/02-large-data-export.md",
     "learning/03-case-studies/02-erp-projects/03-billing-system.md",
     "learning/03-case-studies/02-erp-projects/02-subscription-management.md",
     "learning/03-case-studies/02-erp-projects/01-multi-tenancy.md",
     "learning/03-case-studies/01-ssl-wireless/01-report-optimization.md",
     "learning/02-software-engineering/03-architecture/02-layered-architecture.md",
-    "learning/03-case-studies/01-ssl-wireless/03-api-optimization.md",
     "learning/02-software-engineering/03-architecture/01-mvc-architecture.md",
     "learning/02-software-engineering/01-clean-code/02-functions.md",
     "learning/02-software-engineering/01-clean-code/03-comments.md",
@@ -209,8 +200,6 @@
     "learning/01-php-laravel/03-array-functions/01-array-map.md",
     "learning/01-php-laravel/02-string-functions/03-strcasecmp.md",
     "learning/01-php-laravel/02-string-functions/02-strncmp.md",
-    "learning/01-php-laravel/02-string-functions/Strncmp.md",
-    "learning/01-php-laravel/01-php-basics/cover.md",
     "learning/03-case-studies/06-debug-diary",
     "learning/03-case-studies/05-interview-stories",
     "learning/03-case-studies/04-problems-solved",
@@ -219,7 +208,6 @@
     "learning/03-case-studies/01-ssl-wireless",
     "learning/02-software-engineering/07-devops",
     "learning/02-software-engineering/06-performance",
-    "learning/02-software-engineering/05-security",
-    "learning/02-software-engineering/04-system-design"
+    "learning/02-software-engineering/05-security"
   ]
 }
