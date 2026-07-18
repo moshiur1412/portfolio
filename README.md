@@ -1,4 +1,4 @@
-# MD. Moshiur Rahman — Portfolio
+# Md. Moshiur Rahman — Portfolio
 
 Modern static portfolio website built with HTML, CSS & JavaScript. Ready to publish on GitHub Pages.
 
@@ -45,9 +45,11 @@ Modern static portfolio website built with HTML, CSS & JavaScript. Ready to publ
 4. Choose `main` / `master` branch and `/ (root)` folder
 5. Click **Save**
 
-## Local Development
+## Source Code
 
-Use VS Code with **Live Server** extension — no Node.js required.
+This is a fully static site — plain HTML, CSS, and JavaScript with no build step or Node.js dependency. It can be opened directly in any browser or served by any static host.
+
+> **For reviewers:** `index.html` is the single source of truth for the entire page — all section structure, content, and navigation live there. If you are reading or modifying the source, start with `index.html` to understand how everything fits together. Styles and behavior live in `styles/main.css` and `styles/main.js` respectively.
 
 ## File Structure
 
@@ -76,11 +78,11 @@ portfolio/
 - Google Fonts (Inter + JetBrains Mono)
 - marked.js (markdown parsing, CDN)
 - mermaid.js (diagram rendering, CDN)
-- No frameworks, no Node.js — pure static site
+- No frameworks, no build step — pure static site
 
 ## Author
 
-**MD. Moshiur Rahman**
+**Md. Moshiur Rahman**
 - LinkedIn: [moshiur1412](https://linkedin.com/in/moshiur1412)
 - GitHub: [moshiur1412](https://github.com/moshiur1412)
 - Email: moshiur1412@gmail.com

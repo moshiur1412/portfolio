@@ -9,10 +9,10 @@ When working on this portfolio project, follow these rules:
 ## Project Overview
 
 - **Type:** Static portfolio website (single-page)
-- **Tech:** HTML5, CSS3, Vanilla JavaScript (no frameworks, no Node)
-- **Purpose:** Professional portfolio for MD. Moshiur Rahman — Senior Laravel Developer & Technical Lead
+- **Tech:** HTML5, CSS3, Vanilla JavaScript (no frameworks, no build step)
+- **Purpose:** Professional portfolio for Md. Moshiur Rahman — Senior Software Engineer & Technical Lead
 - **Deployment:** GitHub Pages
-- **Local Dev:** VS Code Live Server extension
+- **Source:** `index.html` is the single source of truth — all structure and content live there; styles in `styles/main.css`, behavior in `styles/main.js`
 
 ---
 
@@ -224,12 +224,13 @@ Each article follows this template:
 
 ## When Updating Content
 
-1. Always verify certificate details from images before adding
-2. Keep consistent date format: `Month DD, YYYY` (e.g., June 20, 2026)
-3. Use `&amp;` for `&` in HTML
-4. Use `fas` for solid icons, `fab` for brand icons (Font Awesome 6)
-5. Test responsive layout after changes
-6. Run through print stylesheet check
+1. **Read `index.html` first** — it is the single source of truth for the entire site. All sections, content, navigation, and the Learning Hub accordion markup live there. Review it before editing so your changes stay consistent with the existing structure and avoid breaking the layout.
+2. Always verify certificate details from images before adding
+3. Keep consistent date format: `Month DD, YYYY` (e.g., June 20, 2026)
+4. Use `&amp;` for `&` in HTML
+5. Use `fas` for solid icons, `fab` for brand icons (Font Awesome 6)
+6. Test responsive layout after changes
+7. Run through print stylesheet check
 
 ---
 
