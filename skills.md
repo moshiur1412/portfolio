@@ -1,8 +1,8 @@
-# Portfolio Skills & Guidelines
+# Portfolio Guidelines
 
-## AI Assistant Instructions
+## Purpose
 
-When working on this portfolio project, follow these rules:
+This document defines the content, design, and implementation standards for maintaining the portfolio website. Follow these guidelines when updating copy, layout, certificates, Learning Hub articles, or static assets.
 
 ---
 
@@ -10,20 +10,20 @@ When working on this portfolio project, follow these rules:
 
 - **Type:** Static portfolio website (single-page)
 - **Tech:** HTML5, CSS3, Vanilla JavaScript (no frameworks, no build step)
-- **Purpose:** Professional portfolio for Md. Moshiur Rahman — Senior Software Engineer & Technical Lead
+- **Purpose:** Professional portfolio for Md. Moshiur Rahman, Senior Software Engineer & Technical Lead
 - **Deployment:** GitHub Pages
-- **Source:** `index.html` is the single source of truth — all structure and content live there; styles in `styles/main.css`, behavior in `styles/main.js`
+- **Source:** `index.html` is the single source of truth. Structure, content, navigation, and Learning Hub accordion markup live there; styles live in `styles/main.css`; behavior lives in `styles/main.js`.
 
 ---
 
-## Content Rules
+## Content Standards
 
 ### Writing Style
-- Use **first person** ("I build", "I specialize")
-- Keep descriptions **natural and conversational**, not robotic
-- Be **specific** with metrics (90%+ improvement, 40k+ records, 11+ years)
-- Avoid generic buzzwords — use **real achievements**
-- Every section should tell a **story**, not just list facts
+- Use **first person** where appropriate ("I build", "I specialize").
+- Keep descriptions natural, confident, and human.
+- Use specific, verified metrics where available (90%+ improvement, 40k+ records, 11+ years).
+- Avoid generic buzzwords; prioritize concrete achievements and measurable outcomes.
+- Make each section tell a clear professional story rather than listing disconnected facts.
 
 ### Stats (Verified from CV)
 | Stat | Value | Source |
@@ -44,7 +44,7 @@ When working on this portfolio project, follow these rules:
 
 ---
 
-## Design Rules
+## Design Standards
 
 ### Colors (CSS Variables)
 ```
@@ -91,8 +91,8 @@ When working on this portfolio project, follow these rules:
 | `learning/**/*.md` | Markdown articles fetched at runtime |
 
 ### How Learning Hub Works
-1. `index.html` has accordion links with `data-id` pointing to `.md` files
-2. `main.js` `loadArticle()` fetches the `.md` file from `learning/` directory
+1. `index.html` contains accordion links with `data-id` values that point to `.md` files
+2. `styles/main.js` `loadArticle()` fetches the `.md` file from the `learning/` directory
 3. `marked.js` (CDN) parses markdown to HTML client-side
 4. Parsed HTML is rendered in `#article-view` container
 5. `mermaid.js` (CDN) renders any diagram code blocks
@@ -211,26 +211,26 @@ Each article follows this template:
 
 ---
 
-## Do NOT
+## Constraints
 
 - Use frameworks (React, Vue, etc.) — keep it pure HTML/CSS/JS
 - Use Node.js or build tools — site is fully static
-- Add comments in code unless specifically asked
+- Add unnecessary comments in code
 - Change the color scheme without explicit instruction
 - Remove existing sections without confirmation
 - Add fake metrics or placeholder content
 
 ---
 
-## When Updating Content
+## Update Checklist
 
-1. **Read `index.html` first** — it is the single source of truth for the entire site. All sections, content, navigation, and the Learning Hub accordion markup live there. Review it before editing so your changes stay consistent with the existing structure and avoid breaking the layout.
-2. Always verify certificate details from images before adding
-3. Keep consistent date format: `Month DD, YYYY` (e.g., June 20, 2026)
-4. Use `&amp;` for `&` in HTML
-5. Use `fas` for solid icons, `fab` for brand icons (Font Awesome 6)
-6. Test responsive layout after changes
-7. Run through print stylesheet check
+1. **Read `index.html` first.** It is the single source of truth for the site. Review it before editing so changes stay consistent with the current structure and do not break layout behavior.
+2. Verify certificate details from image files before adding or editing certificate cards.
+3. Keep the date format consistent: `Month DD, YYYY` (for example, June 20, 2026).
+4. Use `&amp;` for `&` in HTML content.
+5. Use `fas` for solid icons and `fab` for brand icons in Font Awesome 6.
+6. Test responsive layout after visual or structural changes.
+7. Check print styling after resume, layout, or typography changes.
 
 ---
 

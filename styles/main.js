@@ -140,7 +140,7 @@ function toggleAccordion(header){
 
 // ===== ARTICLE DATA =====
 var A={};
-A["01-php-basics"]=[{f:"01-print-vs-echo.md",t:"print vs echo",s:1},{f:"02-include-vs-require.md",t:"PHP Include vs Require",s:1},{f:"03-include-once-vs-require-once.md",t:"include_once vs require_once",s:1}];
+A["01-php-basics"]=[{f:"01-print-vs-echo.md",t:"print vs echo",s:1},{f:"02-include-vs-require.md",t:"PHP Include vs Require",s:1},{f:"03-include-once-vs-require-once.md",t:"include_once vs require_once",s:1},{f:"04-isset-vs-empty.md",t:"isset() vs empty()",s:1},{f:"05-null-coalescing-operator.md",t:"Null Coalescing Operator",s:1},{f:"06-switch-vs-match.md",t:"switch vs match",s:1},{f:"07-variable-variables.md",t:"Variable Variables",s:1},{f:"08-references.md",t:"References",s:1},{f:"09-strict-types.md",t:"Strict Types",s:1},{f:"10-type-juggling.md",t:"Type Juggling",s:1}];
 A["02-string-functions"]=[{f:"01-strcmp.md",t:"PHP strcmp() Function",s:1},{f:"02-strncmp.md",t:"PHP strncmp() Function",s:1},{f:"03-strcasecmp.md",t:"PHP strcasecmp() Function",s:1}];
 A["03-array-functions"]=[{f:"01-array-map.md",t:"Array Map",s:1},{f:"02-array-filter.md",t:"Array Filter",s:1},{f:"03-array-reduce.md",t:"Array Reduce",s:1}];
 A["01-clean-code"]=[{f:"01-naming-cnonventions.md",t:"Naming Conventions",s:1},{f:"02-functions.md",t:"Functions",s:1},{f:"03-comments.md",t:"Comments & Documentation",s:1}];
@@ -151,8 +151,8 @@ A["02-erp-projects"]=[{f:"01-multi-tenancy.md",t:"Multi-Tenant Core Banking",s:1
 var CATS={"01-php-laravel":"PHP & Laravel","02-software-engineering":"Software Engineering","03-case-studies":"Case Studies"};
 var SUBS={"01-php-basics":"PHP Basics","02-string-functions":"String Functions","03-array-functions":"Array Functions","04-oop":"OOP","05-laravel":"Laravel","06-database":"Database","07-api":"API","08-interview":"Interview","01-clean-code":"Clean Code","02-design-patterns":"Design Patterns","03-architecture":"Architecture","04-system-design":"System Design","05-security":"Security","06-performance":"Performance","07-devops":"DevOps","01-ssl-wireless":"SSL Wireless","02-erp-projects":"ERP Projects","03-saas-projects":"SaaS Projects","04-problems-solved":"Problems Solved","05-interview-stories":"Interview Stories","06-debug-diary":"Debug Diary"};
 
-// ===== ARTICLE LOADER (fetches HTML from learning/ directory) =====
-mermaid.initialize({startOnLoad:false,theme:'default',securityLevel:'loose'});
+// ===== ARTICLE LOADER (fetches markdown from learning/ directory) =====
+if(window.mermaid){mermaid.initialize({startOnLoad:false,theme:'default',securityLevel:'loose'});}
 
 function loadArticle(e,el){
   e.preventDefault();
@@ -177,7 +177,8 @@ function loadArticle(e,el){
     .then(function(md){
       var isCover=id.indexOf('cover.md')!==-1;
       var content='<button class="back-btn" onclick="closeArticle()"><i class="fas fa-arrow-left"></i> Back</button>';
-      content+='<div class="md-content">'+marked.parse(md)+'</div>';
+      var html=window.marked?marked.parse(md):'<pre>'+md.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})+'</pre>';
+      content+='<div class="md-content">'+html+'</div>';
       view.innerHTML=content;
 
       if(isCover){
@@ -202,14 +203,14 @@ function loadArticle(e,el){
       var slugger=function(s){return s.toLowerCase().replace(/<[^>]*>/g,'').replace(/[^\p{L}\p{N}\s-]/gu,'').replace(/\s+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'').trim()};
       view.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h){if(!h.id)h.id=slugger(h.textContent)});
       view.querySelectorAll('pre code.language-mermaid').forEach(function(b){var p=b.parentElement;var d=document.createElement('div');d.className='mermaid';d.textContent=b.textContent;p.replaceWith(d)});
-      try{mermaid.run({nodes:view.querySelectorAll('.mermaid')})}catch(x){}
+      if(window.mermaid){try{mermaid.run({nodes:view.querySelectorAll('.mermaid')})}catch(x){}}
       view.querySelectorAll('table').forEach(function(t){var ic=false;t.querySelectorAll('th').forEach(function(th){if(th.textContent.trim()==='Status')ic=true});if(ic){t.querySelectorAll('td').forEach(function(td){if(td.textContent.trim()==='?')td.innerHTML='<input type="checkbox" style="cursor:pointer;width:18px;height:18px;accent-color:var(--primary)">'})}t.classList.add('checklist-table')});
       view.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var id=this.getAttribute('href').substring(1);var tgt=document.getElementById(id);if(tgt){ev.preventDefault();var offset=90;var y=tgt.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:y,behavior:'smooth'})}})});
       view.querySelectorAll('.md-content a[data-id]').forEach(function(a){a.onclick=function(ev){return loadArticle(ev,this)}});
       view.scrollIntoView({behavior:'smooth',block:'start'});
     })
     .catch(function(err){
-      view.innerHTML='<button class="back-btn" onclick="closeArticle()"><i class="fas fa-arrow-left"></i> Back</button><div class="md-content" style="text-align:center;padding:40px"><i class="fas fa-exclamation-triangle" style="font-size:1.5rem;color:#e74c3c"></i><p style="margin-top:12px;color:var(--text-muted)">Article not found. Please try again.</p></div>';
+      view.innerHTML='<button class="back-btn" onclick="closeArticle()"><i class="fas fa-arrow-left"></i> Back</button><div class="md-content" style="text-align:center;padding:40px"><i class="fas fa-exclamation-triangle" style="font-size:1.5rem;color:#e74c3c"></i><p style="margin-top:12px;color:var(--text-muted)">Content is not available yet. If you opened this site directly from the file system, run it through a local server so markdown files can be fetched.</p></div>';
     });
 
   return false;

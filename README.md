@@ -1,27 +1,24 @@
-# Md. Moshiur Rahman — Portfolio
+# Md. Moshiur Rahman - Portfolio
 
-Modern static portfolio website built with HTML, CSS & JavaScript. Ready to publish on GitHub Pages.
+A professional single-page portfolio for Md. Moshiur Rahman, Senior Software Engineer and Technical Lead. The site is built as a fully static experience with HTML5, CSS3, and vanilla JavaScript, and is ready for deployment on GitHub Pages.
 
 ## Live Demo
 
 **URL:** `https://moshiur1412.github.io/portfolio`
 
-## Features
+## Highlights
 
-- **Loading screen** — animated spinner on page load
-- **Scroll reveal** — sections fade up as you scroll
-- **Animated stats** — counter animation (11+, 45+, 25+, 15+)
-- **Certificate filters** — filter by SQL, AI, Security, Programming, Professional
-- **Lightbox viewer** — click certificates to view full size with navigation
-- **Dark/Light theme** — toggle with localStorage persistence
-- **Tech stack marquee** — infinite scrolling tech icons
-- **Learning Hub** — articles fetched from markdown files, parsed client-side with marked.js
-- **Contact form** — styled contact section
-- **PDF download** — click Download PDF to open professional resume
-- **Print fallback** — click Print Version for browser's native print dialog
-- **Responsive** — works on mobile, tablet, and desktop
+- **Professional positioning** - focused on senior software engineering, technical leadership, and real project outcomes
+- **Responsive interface** - optimized for mobile, tablet, and desktop screens
+- **Dark and light themes** - includes localStorage persistence
+- **Animated experience metrics** - counters for experience, projects, clients, and certifications
+- **Technical skills showcase** - grouped core competencies and scrolling technology stack
+- **Learning Hub** - markdown articles fetched at runtime and rendered client-side with marked.js
+- **Certificate gallery** - category filters, full-size lightbox viewer, and keyboard-friendly navigation
+- **Resume access** - PDF download plus browser print fallback
+- **Static deployment** - no framework, no build step, and no Node.js dependency
 
-## Sections
+## Page Sections
 
 1. Hero (Profile + Contact)
 2. Stats (Experience, Projects, Clients, Certifications)
@@ -31,25 +28,25 @@ Modern static portfolio website built with HTML, CSS & JavaScript. Ready to publ
 6. Tech Stack (Scrolling marquee)
 7. Professional Experience (Timeline)
 8. Key Contributions (Projects)
-9. Learning Hub (Accordion — fetches .md files)
+9. Learning Hub (Accordion - fetches `.md` files)
 10. Licenses & Certifications (15 certificates with filters)
 11. Education & More
 12. Contact
 13. Download Resume
 
-## Deploy to GitHub Pages
+## Deployment
 
-1. Push this repo to GitHub (`moshiur1412/portfolio`)
-2. Go to **Settings → Pages**
+1. Push this repository to GitHub (`moshiur1412/portfolio`)
+2. Go to **Settings -> Pages**
 3. Under "Source", select **Deploy from a branch**
 4. Choose `main` / `master` branch and `/ (root)` folder
 5. Click **Save**
 
 ## Source Code
 
-This is a fully static site — plain HTML, CSS, and JavaScript with no build step or Node.js dependency. It can be opened directly in any browser or served by any static host.
+This is a fully static site: plain HTML, CSS, and JavaScript with no build step or Node.js dependency. It can be opened directly in a browser or served by any static host.
 
-> **For reviewers:** `index.html` is the single source of truth for the entire page — all section structure, content, and navigation live there. If you are reading or modifying the source, start with `index.html` to understand how everything fits together. Styles and behavior live in `styles/main.css` and `styles/main.js` respectively.
+> **For reviewers:** `index.html` is the single source of truth for the page. It contains the section structure, content, navigation, and Learning Hub accordion markup. Styles live in `styles/main.css`; behavior lives in `styles/main.js`.
 
 ## File Structure
 
@@ -78,7 +75,14 @@ portfolio/
 - Google Fonts (Inter + JetBrains Mono)
 - marked.js (markdown parsing, CDN)
 - mermaid.js (diagram rendering, CDN)
-- No frameworks, no build step — pure static site
+- No frameworks, no build step, and no runtime server dependency
+
+## Maintenance Notes
+
+- Update `index.html` first when changing page content or structure.
+- Keep certificate counts and categories synchronized with the gallery filters.
+- Add Learning Hub articles under `learning/` and register new entries in `styles/main.js` when needed.
+- Validate changes on both desktop and mobile before publishing.
 
 ## Author
 
